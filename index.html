@@ -4,534 +4,216 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tasteapple — Personal Dashboard</title>
-  <meta name="description" content="Personal dashboard and profile landing page for Tasteapple." />
-  <style>
-    :root {
-      --bg: #07111f;
-      --bg-soft: rgba(255, 255, 255, 0.06);
-      --panel: rgba(10, 20, 34, 0.72);
-      --line: rgba(255, 255, 255, 0.1);
-      --text: #f4f7fb;
-      --muted: #9fb1c7;
-      --accent: #6ee7ff;
-      --accent-2: #8b5cf6;
-      --accent-3: #22c55e;
-      --shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
-      --radius: 24px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(110, 231, 255, 0.14), transparent 30%),
-        radial-gradient(circle at top right, rgba(139, 92, 246, 0.18), transparent 28%),
-        linear-gradient(160deg, #040910 0%, #081321 42%, #07111f 100%);
-      min-height: 100vh;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .shell {
-      width: min(1200px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 24px 0 56px;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 16px;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 14px 18px;
-      margin-bottom: 28px;
-      background: rgba(7, 17, 31, 0.72);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      backdrop-filter: blur(16px);
-      box-shadow: var(--shadow);
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-      display: grid;
-      place-items: center;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #05101a;
-      font-weight: 800;
-      box-shadow: 0 12px 28px rgba(110, 231, 255, 0.22);
-    }
-
-    .nav {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .nav a {
-      padding: 10px 14px;
-      color: var(--muted);
-      border-radius: 12px;
-      transition: 0.2s ease;
-    }
-
-    .nav a:hover {
-      color: var(--text);
-      background: rgba(255,255,255,0.06);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.4fr 0.9fr;
-      gap: 24px;
-      margin-bottom: 24px;
-    }
-
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      backdrop-filter: blur(18px);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-main {
-      padding: 34px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.4rem, 5vw, 4.8rem);
-      line-height: 0.98;
-      letter-spacing: -0.04em;
-      max-width: 10ch;
-    }
-
-    .hero-main p {
-      margin: 18px 0 0;
-      max-width: 62ch;
-      color: var(--muted);
-      font-size: 1.04rem;
-      line-height: 1.8;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 13px 18px;
-      border-radius: 14px;
-      font-weight: 600;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-1px);
-    }
-
-    .button.primary {
-      color: #041019;
-      background: linear-gradient(135deg, var(--accent), #c4fbff);
-    }
-
-    .button.secondary {
-      border: 1px solid var(--line);
-      color: var(--text);
-      background: rgba(255,255,255,0.04);
-    }
-
-    .hero-side {
-      padding: 24px;
-      display: grid;
-      gap: 16px;
-      align-content: start;
-    }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-
-    .stat {
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .stat-label {
-      color: var(--muted);
-      font-size: 0.85rem;
-      margin-bottom: 8px;
-    }
-
-    .stat-value {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-    }
-
-    .section-grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 24px;
-      margin-top: 24px;
-    }
-
-    .section {
-      padding: 28px;
-    }
-
-    .section h2 {
-      margin: 0 0 14px;
-      font-size: 1.4rem;
-      letter-spacing: -0.03em;
-    }
-
-    .section p,
-    .section li {
-      color: var(--muted);
-      line-height: 1.75;
-    }
-
-    .about {
-      grid-column: span 7;
-    }
-
-    .focus {
-      grid-column: span 5;
-    }
-
-    .timeline {
-      grid-column: span 7;
-    }
-
-    .links {
-      grid-column: span 5;
-    }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .chip {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: var(--text);
-      font-size: 0.92rem;
-    }
-
-    .timeline-list {
-      margin: 18px 0 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 16px;
-    }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 88px 1fr;
-      gap: 16px;
-      align-items: start;
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .timeline-year {
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    .timeline-item strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--text);
-      font-size: 1rem;
-    }
-
-    .link-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .link-card {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-
-    .link-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(110, 231, 255, 0.35);
-    }
-
-    .link-card span {
-      color: var(--muted);
-      font-size: 0.92rem;
-      display: block;
-      margin-top: 6px;
-    }
-
-    .footer {
-      margin-top: 24px;
-      padding: 22px 6px 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    @media (max-width: 960px) {
-      .hero,
-      .section-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about,
-      .focus,
-      .timeline,
-      .links {
-        grid-column: auto;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .shell {
-        width: min(100% - 18px, 1200px);
-        padding-top: 12px;
-      }
-
-      .topbar {
-        position: static;
-        margin-bottom: 18px;
-      }
-
-      .hero-main,
-      .hero-side,
-      .section {
-        padding: 22px;
-      }
-
-      .timeline-item {
-        grid-template-columns: 1fr;
-      }
-
-      .stat-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <meta name="description" content="Modern personal dashboard and intro page for Tasteapple." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/main.css" />
 </head>
 <body>
-  <div class="shell">
+  <div class="page-shell">
     <header class="topbar">
-      <div class="brand">
+      <a class="brand" href="#hero">
         <div class="brand-mark">T</div>
         <div>
-          <div>Tasteapple</div>
-          <small style="color: var(--muted); font-weight: 500;">Personal dashboard / intro page</small>
+          <strong>Tasteapple</strong>
+          <span>Personal dashboard / profile site</span>
         </div>
-      </div>
+      </a>
       <nav class="nav">
+        <a href="#hero">Home</a>
         <a href="#about">About</a>
-        <a href="#focus">Focus</a>
+        <a href="#modules">Modules</a>
         <a href="#timeline">Timeline</a>
         <a href="#links">Links</a>
       </nav>
     </header>
 
-    <section class="hero">
-      <article class="card hero-main">
-        <div class="eyebrow">Security · Research · Builder</div>
-        <h1>Sharp profile page for your next first impression.</h1>
-        <p>
-          This is a strong starting frame for a personal intro / resume-style landing page.
-          Right now it is intentionally written as a polished dashboard shell, so later you can drop in
-          your real profile, projects, experience, links, and contact details without redesigning from scratch.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#about">Start Here</a>
-          <a class="button secondary" href="#links">View Links</a>
-        </div>
-      </article>
-
-      <aside class="card hero-side">
-        <div class="stat-grid">
-          <div class="stat">
-            <div class="stat-label">Current mode</div>
-            <div class="stat-value">Building</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Site type</div>
-            <div class="stat-value">Profile</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Tone</div>
-            <div class="stat-value">Modern</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Version</div>
-            <div class="stat-value">v1</div>
+    <main>
+      <section class="hero panel" id="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">Research · Security · Builder · Personal Brand</div>
+          <h1>Make your intro page feel like a real control panel, not just a static resume.</h1>
+          <p>
+            This is a brighter, wider, more modular version of your personal landing page.
+            Instead of forcing everything into one block, the site is now structured so each section can grow independently.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#about">Start Building</a>
+            <a class="button secondary" href="#modules">See Modules</a>
           </div>
         </div>
-      </aside>
-    </section>
 
-    <section class="section-grid">
-      <article class="card section about" id="about">
-        <h2>About / 소개</h2>
-        <p>
-          Use this area for a short, high-impact self-introduction. A good version is usually 4–7 lines:
-          who you are, what you focus on, what kind of problems you like to solve, and what people should remember about you.
-        </p>
-        <p>
-          For now, this section is placeholder copy. Later we can rewrite it into a sharper personal summary,
-          a security-research profile, a builder-style intro, or a more formal resume-style overview.
-        </p>
-        <div class="chips">
-          <div class="chip">Cybersecurity</div>
-          <div class="chip">Bug Bounty</div>
-          <div class="chip">AI Agents</div>
-          <div class="chip">Automation</div>
-          <div class="chip">Open Source</div>
+        <div class="hero-dashboard">
+          <div class="stat-card accent">
+            <span>Mode</span>
+            <strong>Planning</strong>
+          </div>
+          <div class="stat-card">
+            <span>Layout</span>
+            <strong>Modular</strong>
+          </div>
+          <div class="stat-card">
+            <span>Tone</span>
+            <strong>Bright</strong>
+          </div>
+          <div class="stat-card success">
+            <span>Ready for</span>
+            <strong>Expansion</strong>
+          </div>
         </div>
-      </article>
+      </section>
 
-      <article class="card section focus" id="focus">
-        <h2>Focus / 지금 강조할 것</h2>
-        <p>
-          This block is good for listing the themes you want visitors to associate with you.
-          Instead of a long bio, it acts like a concise signal board.
+      <section class="content-grid" id="about">
+        <article class="panel section span-7">
+          <div class="section-head">
+            <span class="section-kicker">01</span>
+            <h2>About / 소개</h2>
+          </div>
+          <p>
+            This area should eventually become your main introduction: who you are, what you work on,
+            and what kind of technical or professional identity you want to project.
+          </p>
+          <p>
+            Right now it is intentionally left as a polished placeholder so we can later tune it into a stronger profile:
+            formal resume tone, security researcher tone, builder tone, or something more experimental.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Security Research</span>
+            <span class="pill">Bug Bounty</span>
+            <span class="pill">AI Agents</span>
+            <span class="pill">Automation</span>
+            <span class="pill">Open Source</span>
+          </div>
+        </article>
+
+        <article class="panel section span-5">
+          <div class="section-head">
+            <span class="section-kicker">02</span>
+            <h2>Profile Snapshot</h2>
+          </div>
+          <ul class="clean-list">
+            <li><strong>Position:</strong> Placeholder profile headline</li>
+            <li><strong>Focus:</strong> Technical depth and practical execution</li>
+            <li><strong>Style:</strong> Clean, modern, and expandable</li>
+            <li><strong>Usage:</strong> Intro page / resume / portfolio landing</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="panel section modules-panel" id="modules">
+        <div class="section-head">
+          <span class="section-kicker">03</span>
+          <h2>Module Layout / 모듈형 구성</h2>
+        </div>
+        <p class="section-intro">
+          Instead of cramming everything into one giant page block, this structure assumes each part of your profile can evolve independently.
         </p>
-        <ul>
-          <li>Primary domain and technical strengths</li>
-          <li>Current projects or current direction</li>
-          <li>What kind of opportunities you are open to</li>
-          <li>What makes your work style distinctive</li>
-        </ul>
-      </article>
+        <div class="modules-grid">
+          <a class="module-card" href="#about">
+            <strong>About Module</strong>
+            <span>Core self-introduction and positioning</span>
+          </a>
+          <a class="module-card" href="#timeline">
+            <strong>Timeline Module</strong>
+            <span>Career flow, activity history, progression</span>
+          </a>
+          <a class="module-card" href="#links">
+            <strong>Links Module</strong>
+            <span>GitHub, resume, contact, socials</span>
+          </a>
+          <a class="module-card" href="#future">
+            <strong>Future Module</strong>
+            <span>Projects, writings, achievements, blog, labs</span>
+          </a>
+        </div>
+      </section>
 
-      <article class="card section timeline" id="timeline">
-        <h2>Timeline / 경력·활동 흐름</h2>
-        <ul class="timeline-list">
-          <li class="timeline-item">
-            <div class="timeline-year">Phase 01</div>
-            <div>
-              <strong>Foundation</strong>
-              <span>Put your background, education, or early entry point here.</span>
+      <section class="content-grid" id="timeline">
+        <article class="panel section span-8">
+          <div class="section-head">
+            <span class="section-kicker">04</span>
+            <h2>Timeline / 흐름</h2>
+          </div>
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-marker">A</div>
+              <div>
+                <strong>Foundation</strong>
+                <p>Place your early background, education, or starting point here.</p>
+              </div>
             </div>
-          </li>
-          <li class="timeline-item">
-            <div class="timeline-year">Phase 02</div>
-            <div>
-              <strong>Deep Work</strong>
-              <span>Describe your strongest technical focus area or a meaningful shift in your path.</span>
+            <div class="timeline-item">
+              <div class="timeline-marker">B</div>
+              <div>
+                <strong>Specialization</strong>
+                <p>Show when your work shifted into security, research, development, or another focused track.</p>
+              </div>
             </div>
-          </li>
-          <li class="timeline-item">
-            <div class="timeline-year">Phase 03</div>
-            <div>
-              <strong>Current Direction</strong>
-              <span>Summarize what you are building now and where you are heading next.</span>
+            <div class="timeline-item">
+              <div class="timeline-marker">C</div>
+              <div>
+                <strong>Current Direction</strong>
+                <p>Summarize what you are building now and what direction you want visitors to associate with you.</p>
+              </div>
             </div>
-          </li>
-        </ul>
-      </article>
+          </div>
+        </article>
 
-      <article class="card section links" id="links">
-        <h2>Links / 연결 포인트</h2>
-        <div class="link-list">
+        <article class="panel section span-4" id="future">
+          <div class="section-head">
+            <span class="section-kicker">05</span>
+            <h2>Expandable Area</h2>
+          </div>
+          <p>
+            This column can later become:
+          </p>
+          <ul class="clean-list">
+            <li>Project cards</li>
+            <li>Selected achievements</li>
+            <li>Certifications</li>
+            <li>Public writing</li>
+            <li>Contact CTA</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="panel section" id="links">
+        <div class="section-head">
+          <span class="section-kicker">06</span>
+          <h2>Links / 연결</h2>
+        </div>
+        <div class="links-grid">
           <a class="link-card" href="https://github.com/tasteapple" target="_blank" rel="noreferrer">
             <div>
               <strong>GitHub</strong>
-              <span>Projects, experiments, and code history</span>
+              <span>Code, experiments, repositories</span>
             </div>
-            <div>↗</div>
+            <em>↗</em>
           </a>
           <a class="link-card" href="#">
             <div>
               <strong>Resume / CV</strong>
-              <span>Later we can connect this to a PDF or a dedicated page</span>
+              <span>Later connect a PDF or dedicated subpage</span>
             </div>
-            <div>→</div>
+            <em>→</em>
           </a>
           <a class="link-card" href="#">
             <div>
               <strong>Contact</strong>
               <span>Email, socials, or secure contact channel</span>
             </div>
-            <div>→</div>
+            <em>→</em>
           </a>
         </div>
-      </article>
-    </section>
+      </section>
+    </main>
 
     <footer class="footer">
-      Built as a clean first-frame personal dashboard for future profile, resume, and project expansion.
+      v2 modular frame — brighter layout, wider spacing, and ready for future content expansion.
     </footer>
   </div>
+
+  <script src="./scripts/main.js"></script>
 </body>
 </html>
