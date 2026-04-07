@@ -123,10 +123,10 @@ a {
 
 .hero-copy h1 {
   margin: 0;
-  font-size: clamp(2.7rem, 5vw, 5rem);
-  line-height: 0.98;
-  letter-spacing: -0.05em;
-  max-width: 12ch;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  max-width: 13ch;
 }
 
 .hero-copy p {
@@ -408,14 +408,16 @@ a {
 
 .page-hero {
   margin-bottom: 22px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .page-title {
   margin: 0;
-  font-size: clamp(2.2rem, 4.6vw, 4.2rem);
-  line-height: 1.02;
-  letter-spacing: -0.04em;
-  max-width: 14ch;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  max-width: 16ch;
 }
 
 .lead-paragraph {
