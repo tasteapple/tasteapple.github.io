@@ -20,26 +20,31 @@
           <span>tasteapple · Profile &amp; Work</span>
         </div>
       </a>
-      <nav class="nav">
-        <a href="./resume.html">Resume</a>
-        <a href="./research.html">Research</a>
-        <a href="./projects.html">Projects</a>
-        <a href="./links.html">Links</a>
-      </nav>
+      <div class="topbar-right">
+        <nav class="nav">
+          <a href="./resume.html">Resume</a>
+          <a href="./research.html">Research</a>
+          <a href="./projects.html">Projects</a>
+          <a href="./links.html">Links</a>
+        </nav>
+        <div class="lang-toggle" aria-label="Language switcher">
+          <button type="button" data-lang-switch="ko">KO</button>
+          <button type="button" data-lang-switch="en">EN</button>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="hero panel hero-home minimal-hero">
         <div class="hero-copy">
-          <div class="eyebrow">Security · Research · Projects</div>
+          <div class="eyebrow" data-i18n data-ko="Security · Research · Projects" data-en="Security · Research · Projects">Security · Research · Projects</div>
           <h1>김경회 (David)</h1>
-          <p>
-            보안 학습, 연구, 프로젝트, 그리고 작업물을 구조적으로 정리해두는 개인 허브 페이지입니다.<br />
-            A security-focused personal hub for organizing profile, research, projects, and practical work.
+          <p data-i18n data-ko="보안 학습, 연구, 프로젝트, 그리고 작업물을 구조적으로 정리해두는 개인 허브 페이지입니다." data-en="A security-focused personal hub for organizing profile, research, projects, and practical work.">
+            보안 학습, 연구, 프로젝트, 그리고 작업물을 구조적으로 정리해두는 개인 허브 페이지입니다.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="./resume.html">Resume</a>
-            <a class="button secondary" href="./projects.html">Projects</a>
+            <a class="button primary" href="./resume.html" data-i18n data-ko="Resume" data-en="Resume">Resume</a>
+            <a class="button secondary" href="./projects.html" data-i18n data-ko="Projects" data-en="Projects">Projects</a>
           </div>
         </div>
 
@@ -50,29 +55,30 @@
 
       <section class="modules-grid modules-home-grid main-hub-grid">
         <a class="module-card large-card" href="./resume.html">
-          <strong>Resume / 이력 및 소개</strong>
-          <span>학습 흐름, 기술적 방향, 이력, 그리고 전문적으로 나를 어떻게 소개할지 정리한 페이지.</span>
+          <strong data-i18n data-ko="Resume / 이력 및 소개" data-en="Resume / Profile">Resume / 이력 및 소개</strong>
+          <span data-i18n data-ko="학습 흐름, 기술적 방향, 이력, 그리고 전문적으로 나를 어떻게 소개할지 정리한 페이지." data-en="A page for background, strengths, learning path, and professional self-introduction.">학습 흐름, 기술적 방향, 이력, 그리고 전문적으로 나를 어떻게 소개할지 정리한 페이지.</span>
         </a>
         <a class="module-card large-card" href="./research.html">
-          <strong>Research / 연구와 학습</strong>
-          <span>보안 학습, 악성코드 분석, 포렌식 관점, 그리고 기술적 탐구 흐름을 정리하는 공간.</span>
+          <strong data-i18n data-ko="Research / 연구와 학습" data-en="Research / Study">Research / 연구와 학습</strong>
+          <span data-i18n data-ko="보안 학습, 악성코드 분석, 포렌식 관점, 그리고 기술적 탐구 흐름을 정리하는 공간." data-en="A space for security learning, malware analysis, forensic thinking, and technical exploration.">보안 학습, 악성코드 분석, 포렌식 관점, 그리고 기술적 탐구 흐름을 정리하는 공간.</span>
         </a>
         <a class="module-card large-card" href="./projects.html">
-          <strong>Projects / 프로젝트</strong>
-          <span>직접 만든 도구, 실습형 프로젝트, 팀 프로젝트, 그리고 구현 결과물을 모아둔 페이지.</span>
+          <strong data-i18n data-ko="Projects / 프로젝트" data-en="Projects / Work">Projects / 프로젝트</strong>
+          <span data-i18n data-ko="직접 만든 도구, 실습형 프로젝트, 팀 프로젝트, 그리고 구현 결과물을 모아둔 페이지." data-en="A collection of tools, hands-on projects, collaborative work, and implementation results.">직접 만든 도구, 실습형 프로젝트, 팀 프로젝트, 그리고 구현 결과물을 모아둔 페이지.</span>
         </a>
         <a class="module-card large-card" href="./links.html">
-          <strong>Links / 연결</strong>
-          <span>GitHub, 이메일, 그리고 사이트 바깥으로 이어지는 기본 연결 지점.</span>
+          <strong data-i18n data-ko="Links / 연결" data-en="Links / Contact">Links / 연결</strong>
+          <span data-i18n data-ko="GitHub, 이메일, 그리고 사이트 바깥으로 이어지는 기본 연결 지점." data-en="Basic outward paths including GitHub, email, and contact points.">GitHub, 이메일, 그리고 사이트 바깥으로 이어지는 기본 연결 지점.</span>
         </a>
       </section>
     </main>
 
-    <footer class="footer">
-      Homepage is the hub. Detailed content lives in separate pages. / 메인 페이지는 허브 역할을 하고, 자세한 내용은 각각의 페이지에서 다룹니다.
+    <footer class="footer" data-i18n data-ko="메인 페이지는 허브 역할을 하고, 자세한 내용은 각각의 페이지에서 다룹니다." data-en="Homepage is the hub. Detailed content lives in separate pages.">
+      메인 페이지는 허브 역할을 하고, 자세한 내용은 각각의 페이지에서 다룹니다.
     </footer>
   </div>
 
   <script src="./scripts/main.js"></script>
+  <script src="./scripts/i18n.js"></script>
 </body>
 </html>

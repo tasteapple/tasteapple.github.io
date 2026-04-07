@@ -88,6 +88,14 @@ a {
   font-size: 0.9rem;
 }
 
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 .nav {
   display: flex;
   gap: 10px;
@@ -103,6 +111,30 @@ a {
 
 .nav a:hover {
   background: rgba(59, 130, 246, 0.08);
+  color: var(--text);
+}
+
+.lang-toggle {
+  display: inline-flex;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(31,41,55,0.08);
+}
+
+.lang-toggle button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lang-toggle button.active {
+  background: rgba(59, 130, 246, 0.14);
   color: var(--text);
 }
 
@@ -581,6 +613,11 @@ main > .modules-grid {
 
   .topbar {
     position: static;
+  }
+
+  .topbar-right {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .hero,
