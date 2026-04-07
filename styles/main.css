@@ -122,6 +122,11 @@ a {
   padding: 34px;
 }
 
+.minimal-hero {
+  align-items: center;
+  min-height: 420px;
+}
+
 .hero-copy h1 {
   margin: 0;
   font-size: clamp(1.7rem, 2.6vw, 2.7rem);
@@ -185,6 +190,61 @@ a {
   grid-template-columns: repeat(2, 1fr);
   gap: 14px;
   align-content: start;
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 320px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(139,92,246,0.12), rgba(255,255,255,0.7));
+  border: 1px solid rgba(31, 41, 55, 0.06);
+  overflow: hidden;
+}
+
+.visual-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(8px);
+}
+
+.orb-a {
+  width: 180px;
+  height: 180px;
+  background: rgba(59,130,246,0.24);
+  top: 28px;
+  right: 44px;
+}
+
+.orb-b {
+  width: 220px;
+  height: 220px;
+  background: rgba(139,92,246,0.18);
+  bottom: 18px;
+  left: 28px;
+}
+
+.visual-card {
+  position: absolute;
+  left: 28px;
+  bottom: 28px;
+  right: 28px;
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(31,41,55,0.06);
+  box-shadow: 0 14px 30px rgba(80, 110, 160, 0.12);
+}
+
+.visual-card span,
+.visual-card small {
+  display: block;
+  color: var(--muted);
+}
+
+.visual-card strong {
+  display: block;
+  margin: 8px 0;
+  font-size: 1.35rem;
 }
 
 .stat-card {
@@ -301,6 +361,11 @@ main > .modules-grid {
 
 .modules-home-grid {
   margin-top: 18px;
+}
+
+.main-hub-grid {
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 24px;
 }
 
 .module-card,
@@ -465,7 +530,8 @@ main > .modules-grid {
   .content-grid,
   .modules-grid,
   .links-grid,
-  .mini-grid {
+  .mini-grid,
+  .main-hub-grid {
     grid-template-columns: 1fr;
   }
 
