@@ -112,6 +112,7 @@ a {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
+  margin-bottom: 22px;
 }
 
 .hero {
@@ -218,6 +219,7 @@ a {
   grid-template-columns: repeat(12, 1fr);
   gap: 22px;
   margin-top: 22px;
+  align-items: start;
 }
 
 .section {
@@ -278,6 +280,16 @@ a {
 
 .modules-panel {
   margin-top: 22px;
+}
+
+main > .panel:first-of-type {
+  margin-top: 0;
+}
+
+main > .panel,
+main > .content-grid,
+main > .modules-grid {
+  margin-bottom: 24px;
 }
 
 .modules-grid {
@@ -455,6 +467,10 @@ a {
   .links-grid,
   .mini-grid {
     grid-template-columns: 1fr;
+  }
+
+  .panel {
+    margin-bottom: 18px;
   }
 
   .span-7,
