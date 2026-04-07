@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tasteapple — Personal Dashboard</title>
-  <meta name="description" content="Modern personal dashboard and intro page for Tasteapple." />
+  <title>Tasteapple — Hybrid Personal Hub</title>
+  <meta name="description" content="Hybrid personal hub for profile, resume, research, projects, and links." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -13,204 +13,138 @@
 <body>
   <div class="page-shell">
     <header class="topbar">
-      <a class="brand" href="#hero">
+      <a class="brand" href="./index.html">
         <div class="brand-mark">T</div>
         <div>
           <strong>Tasteapple</strong>
-          <span>Personal dashboard / profile site</span>
+          <span>Hybrid personal hub</span>
         </div>
       </a>
       <nav class="nav">
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#modules">Modules</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#links">Links</a>
+        <a href="./resume.html">Resume</a>
+        <a href="./research.html">Research</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./links.html">Links</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero panel" id="hero">
+      <section class="hero panel hero-home">
         <div class="hero-copy">
-          <div class="eyebrow">Research · Security · Builder · Personal Brand</div>
-          <h1>Make your intro page feel like a real control panel, not just a static resume.</h1>
+          <div class="eyebrow">Personal Hub · Resume · Research · Projects</div>
+          <h1>One clean landing page, with separate spaces for the parts that deserve depth.</h1>
           <p>
-            This is a brighter, wider, more modular version of your personal landing page.
-            Instead of forcing everything into one block, the site is now structured so each section can grow independently.
+            This homepage is now the front door, not the whole house. It is designed to stay concise,
+            visually strong, and immediately useful — while the deeper pages handle resume details,
+            research notes, projects, and connection points.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#about">Start Building</a>
-            <a class="button secondary" href="#modules">See Modules</a>
+            <a class="button primary" href="./resume.html">Open Resume</a>
+            <a class="button secondary" href="./projects.html">See Projects</a>
           </div>
         </div>
 
-        <div class="hero-dashboard">
+        <div class="hero-dashboard compact-dashboard">
           <div class="stat-card accent">
-            <span>Mode</span>
-            <strong>Planning</strong>
+            <span>Site Type</span>
+            <strong>Hybrid</strong>
           </div>
           <div class="stat-card">
-            <span>Layout</span>
+            <span>Landing Role</span>
+            <strong>Hub</strong>
+          </div>
+          <div class="stat-card">
+            <span>Expansion</span>
             <strong>Modular</strong>
           </div>
-          <div class="stat-card">
-            <span>Tone</span>
-            <strong>Bright</strong>
-          </div>
           <div class="stat-card success">
-            <span>Ready for</span>
-            <strong>Expansion</strong>
+            <span>Status</span>
+            <strong>Ready</strong>
           </div>
         </div>
       </section>
 
-      <section class="content-grid" id="about">
+      <section class="panel section">
+        <div class="section-head">
+          <span class="section-kicker">01</span>
+          <h2>Quick Intro / 빠른 소개</h2>
+        </div>
+        <p class="lead-paragraph">
+          Use this front page for first impression only: short self-introduction, current focus, key links,
+          and a guided path into the deeper sections of the site.
+        </p>
+        <div class="mini-grid">
+          <div class="info-box">
+            <strong>Who am I?</strong>
+            <p>Short identity summary goes here — one paragraph, no overload.</p>
+          </div>
+          <div class="info-box">
+            <strong>What do I do?</strong>
+            <p>Focus areas, technical direction, and current work themes.</p>
+          </div>
+          <div class="info-box">
+            <strong>Where to next?</strong>
+            <p>Guide visitors into resume, research, projects, or direct contact.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel section">
+        <div class="section-head">
+          <span class="section-kicker">02</span>
+          <h2>Main Navigation Modules</h2>
+        </div>
+        <div class="modules-grid modules-home-grid">
+          <a class="module-card large-card" href="./resume.html">
+            <strong>Resume</strong>
+            <span>Formal profile, history, skills, and a more structured professional page.</span>
+          </a>
+          <a class="module-card large-card" href="./research.html">
+            <strong>Research</strong>
+            <span>Technical interests, security themes, writeups, notes, and deeper thinking.</span>
+          </a>
+          <a class="module-card large-card" href="./projects.html">
+            <strong>Projects</strong>
+            <span>Tools, experiments, repositories, and selected work you want people to explore.</span>
+          </a>
+          <a class="module-card large-card" href="./links.html">
+            <strong>Links</strong>
+            <span>GitHub, socials, contact points, and any external destinations.</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="content-grid">
         <article class="panel section span-7">
           <div class="section-head">
-            <span class="section-kicker">01</span>
-            <h2>About / 소개</h2>
+            <span class="section-kicker">03</span>
+            <h2>Suggested Landing Content</h2>
           </div>
-          <p>
-            This area should eventually become your main introduction: who you are, what you work on,
-            and what kind of technical or professional identity you want to project.
-          </p>
-          <p>
-            Right now it is intentionally left as a polished placeholder so we can later tune it into a stronger profile:
-            formal resume tone, security researcher tone, builder tone, or something more experimental.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Security Research</span>
-            <span class="pill">Bug Bounty</span>
-            <span class="pill">AI Agents</span>
-            <span class="pill">Automation</span>
-            <span class="pill">Open Source</span>
-          </div>
+          <ul class="clean-list">
+            <li>A short identity statement</li>
+            <li>One-line summary of your current focus</li>
+            <li>Two or three strongest keywords</li>
+            <li>Quick link to GitHub</li>
+            <li>Direct path to your deeper pages</li>
+          </ul>
         </article>
 
         <article class="panel section span-5">
           <div class="section-head">
-            <span class="section-kicker">02</span>
-            <h2>Profile Snapshot</h2>
-          </div>
-          <ul class="clean-list">
-            <li><strong>Position:</strong> Placeholder profile headline</li>
-            <li><strong>Focus:</strong> Technical depth and practical execution</li>
-            <li><strong>Style:</strong> Clean, modern, and expandable</li>
-            <li><strong>Usage:</strong> Intro page / resume / portfolio landing</li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="panel section modules-panel" id="modules">
-        <div class="section-head">
-          <span class="section-kicker">03</span>
-          <h2>Module Layout / 모듈형 구성</h2>
-        </div>
-        <p class="section-intro">
-          Instead of cramming everything into one giant page block, this structure assumes each part of your profile can evolve independently.
-        </p>
-        <div class="modules-grid">
-          <a class="module-card" href="#about">
-            <strong>About Module</strong>
-            <span>Core self-introduction and positioning</span>
-          </a>
-          <a class="module-card" href="#timeline">
-            <strong>Timeline Module</strong>
-            <span>Career flow, activity history, progression</span>
-          </a>
-          <a class="module-card" href="#links">
-            <strong>Links Module</strong>
-            <span>GitHub, resume, contact, socials</span>
-          </a>
-          <a class="module-card" href="#future">
-            <strong>Future Module</strong>
-            <span>Projects, writings, achievements, blog, labs</span>
-          </a>
-        </div>
-      </section>
-
-      <section class="content-grid" id="timeline">
-        <article class="panel section span-8">
-          <div class="section-head">
             <span class="section-kicker">04</span>
-            <h2>Timeline / 흐름</h2>
+            <h2>Contact Snapshot</h2>
           </div>
-          <div class="timeline-list">
-            <div class="timeline-item">
-              <div class="timeline-marker">A</div>
-              <div>
-                <strong>Foundation</strong>
-                <p>Place your early background, education, or starting point here.</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-marker">B</div>
-              <div>
-                <strong>Specialization</strong>
-                <p>Show when your work shifted into security, research, development, or another focused track.</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-marker">C</div>
-              <div>
-                <strong>Current Direction</strong>
-                <p>Summarize what you are building now and what direction you want visitors to associate with you.</p>
-              </div>
-            </div>
+          <div class="link-list-compact">
+            <a class="compact-link" href="https://github.com/tasteapple" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a class="compact-link" href="./links.html">More links →</a>
+            <a class="compact-link" href="./resume.html">Open resume →</a>
           </div>
         </article>
-
-        <article class="panel section span-4" id="future">
-          <div class="section-head">
-            <span class="section-kicker">05</span>
-            <h2>Expandable Area</h2>
-          </div>
-          <p>
-            This column can later become:
-          </p>
-          <ul class="clean-list">
-            <li>Project cards</li>
-            <li>Selected achievements</li>
-            <li>Certifications</li>
-            <li>Public writing</li>
-            <li>Contact CTA</li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="panel section" id="links">
-        <div class="section-head">
-          <span class="section-kicker">06</span>
-          <h2>Links / 연결</h2>
-        </div>
-        <div class="links-grid">
-          <a class="link-card" href="https://github.com/tasteapple" target="_blank" rel="noreferrer">
-            <div>
-              <strong>GitHub</strong>
-              <span>Code, experiments, repositories</span>
-            </div>
-            <em>↗</em>
-          </a>
-          <a class="link-card" href="#">
-            <div>
-              <strong>Resume / CV</strong>
-              <span>Later connect a PDF or dedicated subpage</span>
-            </div>
-            <em>→</em>
-          </a>
-          <a class="link-card" href="#">
-            <div>
-              <strong>Contact</strong>
-              <span>Email, socials, or secure contact channel</span>
-            </div>
-            <em>→</em>
-          </a>
-        </div>
       </section>
     </main>
 
     <footer class="footer">
-      v2 modular frame — brighter layout, wider spacing, and ready for future content expansion.
+      Homepage is now the hub. Detailed content lives in separate dedicated pages.
     </footer>
   </div>
 
