@@ -17,24 +17,30 @@
         <div class="brand-mark">T</div>
         <div><strong>김경회 (David)</strong><span>tasteapple · Research</span></div>
       </a>
-      <nav class="nav">
-        <a href="./index.html">Home</a>
-        <a href="./resume.html">Resume</a>
-        <a href="./projects.html">Projects</a>
-        <a href="./links.html">Links</a>
-      </nav>
+      <div class="topbar-right">
+        <nav class="nav">
+          <a href="./index.html">Home</a>
+          <a href="./resume.html">Resume</a>
+          <a href="./projects.html">Projects</a>
+          <a href="./links.html">Links</a>
+        </nav>
+        <button type="button" class="lang-toggle single-toggle" data-lang-toggle data-next-lang="en" aria-label="Switch language to EN">
+          <span class="lang-toggle-caption">Lang</span>
+          <span class="lang-toggle-value" data-lang-toggle-label>EN</span>
+        </button>
+      </div>
     </header>
 
     <main>
       <section class="panel section page-hero">
-        <span class="section-kicker">Research / 연구</span>
-        <h1 class="page-title">보안 학습, 악성코드 분석, 포렌식 관점, 그리고 기술적 탐구를 정리하는 공간</h1>
-        <p class="lead-paragraph">This page is intended for deeper technical themes, research notes, and learning trajectories that shape my direction.</p>
+        <span class="section-kicker" data-i18n data-ko="Research / 연구" data-en="Research / Study">Research / 연구</span>
+        <h1 class="page-title" data-i18n data-ko="보안 학습, 악성코드 분석, 포렌식 관점, 그리고 기술적 탐구를 정리하는 공간" data-en="A space for security learning, malware analysis, forensic thinking, and technical exploration.">보안 학습, 악성코드 분석, 포렌식 관점, 그리고 기술적 탐구를 정리하는 공간</h1>
+        <p class="lead-paragraph" data-i18n data-ko="이 페이지는 공부했던 것, 정리해두고 싶은 주제, 연구 방향, 그리고 기술적 관심 흐름을 모아두는 공간이다." data-en="This page is intended for deeper technical themes, learning notes, research directions, and long-term interests.">이 페이지는 공부했던 것, 정리해두고 싶은 주제, 연구 방향, 그리고 기술적 관심 흐름을 모아두는 공간이다.</p>
       </section>
 
       <section class="content-grid">
         <article class="panel section span-8">
-          <h2>Focus Areas / 관심 분야</h2>
+          <h2 data-i18n data-ko="Focus Areas / 관심 분야" data-en="Focus Areas / Key Themes">Focus Areas / 관심 분야</h2>
           <div class="pill-row">
             <span class="pill">Application Security</span>
             <span class="pill">Malware Analysis</span>
@@ -42,19 +48,20 @@
             <span class="pill">Automation</span>
             <span class="pill">LLM Security</span>
           </div>
-          <p style="margin-top:18px;">이 페이지는 공부했던 것, 실습했던 것, 정리해두고 싶은 연구 흐름을 점차 쌓아가는 공간으로 확장할 수 있다.</p>
+          <p style="margin-top:18px;" data-i18n data-ko="이 페이지는 공부했던 것, 실습했던 것, 정리해두고 싶은 연구 흐름을 점차 쌓아가는 공간으로 확장할 수 있다." data-en="This area can gradually grow into a structured archive of what I studied, practiced, and want to explore more deeply.">이 페이지는 공부했던 것, 실습했던 것, 정리해두고 싶은 연구 흐름을 점차 쌓아가는 공간으로 확장할 수 있다.</p>
         </article>
         <article class="panel section span-4">
-          <h2>Research Style / 방식</h2>
+          <h2 data-i18n data-ko="Research Style / 방식" data-en="Research Style / Approach">Research Style / 방식</h2>
           <ul class="clean-list">
-            <li>기술적 분석 중심</li>
-            <li>실습과 구현 기반 학습</li>
-            <li>체계적인 정리</li>
-            <li>도구와 워크플로우 지향</li>
+            <li data-i18n data-ko="기술적 분석 중심" data-en="Technical-analysis driven">기술적 분석 중심</li>
+            <li data-i18n data-ko="실습과 구현 기반 학습" data-en="Hands-on and implementation-based learning">실습과 구현 기반 학습</li>
+            <li data-i18n data-ko="체계적인 정리" data-en="Systematic organization">체계적인 정리</li>
+            <li data-i18n data-ko="도구와 워크플로우 지향" data-en="Tooling and workflow oriented">도구와 워크플로우 지향</li>
           </ul>
         </article>
       </section>
     </main>
   </div>
+  <script src="./scripts/i18n.js"></script>
 </body>
 </html>

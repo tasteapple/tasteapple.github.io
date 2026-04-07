@@ -17,19 +17,25 @@
         <div class="brand-mark">T</div>
         <div><strong>김경회 (David)</strong><span>tasteapple · Links</span></div>
       </a>
-      <nav class="nav">
-        <a href="./index.html">Home</a>
-        <a href="./resume.html">Resume</a>
-        <a href="./research.html">Research</a>
-        <a href="./projects.html">Projects</a>
-      </nav>
+      <div class="topbar-right">
+        <nav class="nav">
+          <a href="./index.html">Home</a>
+          <a href="./resume.html">Resume</a>
+          <a href="./research.html">Research</a>
+          <a href="./projects.html">Projects</a>
+        </nav>
+        <button type="button" class="lang-toggle single-toggle" data-lang-toggle data-next-lang="en" aria-label="Switch language to EN">
+          <span class="lang-toggle-caption">Lang</span>
+          <span class="lang-toggle-value" data-lang-toggle-label>EN</span>
+        </button>
+      </div>
     </header>
 
     <main>
       <section class="panel section page-hero">
-        <span class="section-kicker">Links / 연결</span>
-        <h1 class="page-title">GitHub, 이메일, 그리고 외부 연결 지점을 정리하는 페이지</h1>
-        <p class="lead-paragraph">Keep this page simple and practical. / 이 페이지는 복잡하지 않고 바로 연결되는 구조를 유지하는 것이 좋다.</p>
+        <span class="section-kicker" data-i18n data-ko="Links / 연결" data-en="Links / Contact">Links / 연결</span>
+        <h1 class="page-title" data-i18n data-ko="GitHub, 이메일, 그리고 외부 연결 지점을 정리하는 페이지" data-en="A simple page for GitHub, email, and outward contact points.">GitHub, 이메일, 그리고 외부 연결 지점을 정리하는 페이지</h1>
+        <p class="lead-paragraph" data-i18n data-ko="이 페이지는 복잡하지 않고 바로 연결되는 구조를 유지하는 것이 좋다." data-en="This page is intentionally simple and practical, making it easy to move outward without friction.">이 페이지는 복잡하지 않고 바로 연결되는 구조를 유지하는 것이 좋다.</p>
       </section>
 
       <section class="panel section">
@@ -37,7 +43,7 @@
           <a class="link-card" href="https://github.com/tasteapple" target="_blank" rel="noreferrer">
             <div>
               <strong>GitHub</strong>
-              <span>메인 코드 저장소와 공개 프로젝트를 확인할 수 있는 프로필 링크</span>
+              <span data-i18n data-ko="메인 코드 저장소와 공개 프로젝트를 확인할 수 있는 프로필 링크" data-en="Main GitHub profile for repositories, experiments, and public project work.">메인 코드 저장소와 공개 프로젝트를 확인할 수 있는 프로필 링크</span>
             </div>
             <em>↗</em>
           </a>
@@ -52,5 +58,6 @@
       </section>
     </main>
   </div>
+  <script src="./scripts/i18n.js"></script>
 </body>
 </html>
