@@ -30,8 +30,12 @@
   const saved = localStorage.getItem(STORAGE_KEY);
   const initialLang = saved || browserLang;
 
+  window.tasteappleSetLang = setLang;
+
   if (toggle) {
-    toggle.addEventListener('click', () => {
+    toggle.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
       const nextLang = toggle.getAttribute('data-next-lang') || 'en';
       setLang(nextLang);
     });
