@@ -201,65 +201,16 @@ a {
   overflow: hidden;
 }
 
-.profile-visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
+.image-hero-visual {
+  background: rgba(255,255,255,0.55);
 }
 
-.visual-orb {
-  position: absolute;
-  border-radius: 999px;
-  filter: blur(8px);
-}
-
-.orb-a {
-  width: 180px;
-  height: 180px;
-  background: rgba(59,130,246,0.24);
-  top: 28px;
-  right: 44px;
-}
-
-.orb-b {
-  width: 220px;
-  height: 220px;
-  background: rgba(139,92,246,0.18);
-  bottom: 18px;
-  left: 28px;
-}
-
-
-.profile-emblem {
-  position: relative;
-  width: 190px;
-  height: 190px;
-  display: grid;
-  place-items: center;
-}
-
-.emblem-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 999px;
-  background: conic-gradient(from 180deg, rgba(59,130,246,0.22), rgba(139,92,246,0.36), rgba(34,197,94,0.18), rgba(59,130,246,0.22));
-  box-shadow: 0 24px 50px rgba(80, 110, 160, 0.18);
-}
-
-.emblem-core {
-  position: relative;
-  width: 132px;
-  height: 132px;
-  display: grid;
-  place-items: center;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.88);
-  border: 1px solid rgba(31,41,55,0.06);
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--text);
-  letter-spacing: -0.05em;
+.hero-image {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
 }
 
 .stat-card {
