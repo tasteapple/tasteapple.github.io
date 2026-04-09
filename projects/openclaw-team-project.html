@@ -19,11 +19,11 @@
       </a>
       <div class="topbar-right">
         <nav class="nav">
-        <a href="../index.html">Home</a>
-        <a href="../projects.html">Projects</a>
-        <a href="../research.html">Research</a>
-        <a href="../links.html">Links</a>
-      </nav>
+          <a href="../index.html">Home</a>
+          <a href="../projects.html">Projects</a>
+          <a href="../research.html">Research</a>
+          <a href="../links.html">Links</a>
+        </nav>
         <button type="button" class="lang-toggle single-toggle" data-lang-toggle data-next-lang="en" aria-label="Switch language to EN">
           <span class="lang-toggle-caption">Lang</span>
           <span class="lang-toggle-value" data-lang-toggle-label>EN</span>
@@ -32,49 +32,55 @@
     </header>
     <main>
       <section class="panel section page-hero">
-        <span class="section-kicker">Project Detail</span>
+        <span class="section-kicker" data-i18n data-ko="Project Detail / 프로젝트 상세" data-en="Project Detail / Overview">Project Detail / 프로젝트 상세</span>
         <h1 class="page-title">OpenClaw Team Project</h1>
-        <p class="lead-paragraph">Team-based project flow built around idea development, function definition, OpenClaw setup, implementation, scenario writing, and presentation preparation.</p>
+        <p class="lead-paragraph" data-i18n data-ko="OpenClaw를 직접 구성하고 사용하면서, AI agent 환경의 취약점과 동작 특성을 실습 중심으로 검토해본 팀 프로젝트." data-en="A team project built around configuring and using OpenClaw directly while examining the behavior and vulnerabilities of an AI agent environment through hands-on testing.">OpenClaw를 직접 구성하고 사용하면서, AI agent 환경의 취약점과 동작 특성을 실습 중심으로 검토해본 팀 프로젝트.</p>
         <div class="hero-actions">
-          <a class="button secondary" href="../projects.html">Back to Projects</a>
+          <a class="button secondary" href="../projects.html" data-i18n data-ko="프로젝트 목록으로" data-en="Back to Projects">프로젝트 목록으로</a>
         </div>
       </section>
 
       <section class="content-grid">
         <article class="panel section span-7">
-          <h2>Overview</h2>
-          <p>This project appeared in the Notion project database as a structured team effort with repeated stages such as idea brainstorming, feature definition, OpenClaw configuration, development and implementation, output organization, scenario writing, and presentation evaluation.</p>
+          <h2 data-i18n data-ko="Overview / 개요" data-en="Overview / Summary">Overview / 개요</h2>
+          <p data-i18n data-ko="이 프로젝트는 OpenClaw를 직접 써보고 싶다는 호기심에서 시작됐다. 최근 온디바이스 AI와 agent 환경이 점점 늘어나고 있고, 앞으로는 일상적인 형태로 자리 잡을 가능성이 높다고 생각했기 때문에, 단순히 소개만 보는 것이 아니라 직접 구성하고 테스트해보는 쪽으로 접근했다." data-en="This project started from a simple desire to use OpenClaw directly. Because on-device AI and agent environments are becoming more common and likely to be part of everyday workflows in the future, the project focused on configuring and testing the system directly rather than only studying it from a distance.">이 프로젝트는 OpenClaw를 직접 써보고 싶다는 호기심에서 시작됐다. 최근 온디바이스 AI와 agent 환경이 점점 늘어나고 있고, 앞으로는 일상적인 형태로 자리 잡을 가능성이 높다고 생각했기 때문에, 단순히 소개만 보는 것이 아니라 직접 구성하고 테스트해보는 쪽으로 접근했다.</p>
+          <p data-i18n data-ko="그 과정에서 단순 사용 경험에만 머무르지 않고, 어떤 취약점이 있는지, 어떤 공격이 통하는지, 모델 버전이나 OpenClaw 버전에 따라 어떤 차이가 생기는지를 확인해보는 쪽으로 프로젝트가 확장됐다." data-en="The work quickly expanded beyond simple usage. It turned into a practical effort to identify possible vulnerabilities, test different attack paths, and observe how behavior changed depending on both the OpenClaw version and the underlying AI model version.">그 과정에서 단순 사용 경험에만 머무르지 않고, 어떤 취약점이 있는지, 어떤 공격이 통하는지, 모델 버전이나 OpenClaw 버전에 따라 어떤 차이가 생기는지를 확인해보는 쪽으로 프로젝트가 확장됐다.</p>
         </article>
         <article class="panel section span-5">
-          <h2>Observed Workflow</h2>
+          <h2 data-i18n data-ko="Core Focus / 핵심 내용" data-en="Core Focus / Main Areas">Core Focus / 핵심 내용</h2>
           <ul class="clean-list">
-            <li>Project planning and topic selection</li>
-            <li>OpenClaw environment setup</li>
-            <li>Function definition and development</li>
-            <li>Scenario writing and deliverable preparation</li>
+            <li data-i18n data-ko="OpenClaw 직접 구성 및 사용" data-en="Direct OpenClaw setup and usage">OpenClaw 직접 구성 및 사용</li>
+            <li data-i18n data-ko="취약점 테스트" data-en="Vulnerability testing">취약점 테스트</li>
+            <li data-i18n data-ko="RCE와 프롬프트 인젝션 시도" data-en="RCE and prompt-injection attempts">RCE와 프롬프트 인젝션 시도</li>
+            <li data-i18n data-ko="모델 버전별 동작 차이 확인" data-en="Comparison across AI model and OpenClaw versions">모델 버전별 동작 차이 확인</li>
           </ul>
         </article>
       </section>
 
       <section class="panel section">
-        <h2>Why It Matters</h2>
-        <p>This project helps show not just isolated technical work, but the ability to move through a full project flow: planning, implementation, documentation, feedback, and presentation.</p>
+        <h2 data-i18n data-ko="Why I Built It / 만든 이유" data-en="Why I Built It / Motivation">Why I Built It / 만든 이유</h2>
+        <p data-i18n data-ko="가장 큰 이유는 OpenClaw를 직접 써보고 싶었기 때문이다. 요즘 AI agent가 점점 더 주목받고 있고, 결국에는 온디바이스 환경에도 AI들이 탑재되고 agent 활용이 일상화될 것이라고 생각했다. 그래서 실제 환경을 직접 구성하고, 동작 방식과 보안 측면을 스스로 확인해보고 싶었다." data-en="The main reason behind this project was that I wanted to use OpenClaw directly. AI agents are becoming increasingly important, and I believe on-device AI and agent-based interaction will become a normal part of everyday computing. That made it meaningful to build the environment myself and test both its behavior and security aspects directly.">가장 큰 이유는 OpenClaw를 직접 써보고 싶었기 때문이다. 요즘 AI agent가 점점 더 주목받고 있고, 결국에는 온디바이스 환경에도 AI들이 탑재되고 agent 활용이 일상화될 것이라고 생각했다. 그래서 실제 환경을 직접 구성하고, 동작 방식과 보안 측면을 스스로 확인해보고 싶었다.</p>
       </section>
 
       <section class="content-grid">
         <article class="panel section span-6">
-          <h2>Observed Stages</h2>
-          <ul class="clean-list">
-            <li>Project planning and brainstorming</li>
-            <li>OpenClaw setup and environment preparation</li>
-            <li>Function definition and implementation</li>
-            <li>Scenario writing and output organization</li>
-          </ul>
+          <h2 data-i18n data-ko="My Role / 역할" data-en="My Role / Contribution">My Role / 역할</h2>
+          <p data-i18n data-ko="이 프로젝트에서 나는 기획, OpenClaw 구성, 그리고 취약점 테스트를 맡았다. 단순 사용이 아니라 직접 환경을 만들고, 테스트 시나리오를 잡고, 어떤 부분이 동작하고 어떤 부분이 막히는지 검토하는 쪽에 집중했다." data-en="My role in this project included planning, OpenClaw setup, and vulnerability testing. The work was not limited to using the system, but also included creating the environment, building test scenarios, and examining which behaviors were possible or blocked.">이 프로젝트에서 나는 기획, OpenClaw 구성, 그리고 취약점 테스트를 맡았다. 단순 사용이 아니라 직접 환경을 만들고, 테스트 시나리오를 잡고, 어떤 부분이 동작하고 어떤 부분이 막히는지 검토하는 쪽에 집중했다.</p>
         </article>
         <article class="panel section span-6">
-          <h2>Portfolio Meaning</h2>
-          <p>It adds evidence of structured execution, teamwork, and progression through a full delivery cycle rather than only standalone technical artifacts.</p>
+          <h2 data-i18n data-ko="How I Want It Framed / 어떻게 소개하고 싶은가" data-en="How I Want It Framed / Positioning">How I Want It Framed / 어떻게 소개하고 싶은가</h2>
+          <p data-i18n data-ko="이 프로젝트는 ‘OpenClaw 기반 팀 프로젝트’이자 ‘AI agent 활용 프로젝트’로 소개하는 것이 가장 잘 맞는다. 핵심은 단순히 OpenClaw를 사용해본 것이 아니라, 실제로 구성하고, 테스트하고, 취약점 관점에서 검토한 경험까지 담겨 있다는 점이다." data-en="This project is best framed as both an OpenClaw-based team project and an AI-agent experimentation project. Its value lies not only in having used OpenClaw, but in configuring it directly, testing it, and examining it from a vulnerability perspective.">이 프로젝트는 ‘OpenClaw 기반 팀 프로젝트’이자 ‘AI agent 활용 프로젝트’로 소개하는 것이 가장 잘 맞는다. 핵심은 단순히 OpenClaw를 사용해본 것이 아니라, 실제로 구성하고, 테스트하고, 취약점 관점에서 검토한 경험까지 담겨 있다는 점이다.</p>
         </article>
+      </section>
+
+      <section class="panel section">
+        <h2 data-i18n data-ko="What Stands Out / 강조할 포인트" data-en="What Stands Out / Highlights">What Stands Out / 강조할 포인트</h2>
+        <ul class="clean-list">
+          <li data-i18n data-ko="OpenClaw를 직접 구성하고 실제로 사용해본 프로젝트" data-en="A project that involved configuring and using OpenClaw directly">OpenClaw를 직접 구성하고 실제로 사용해본 프로젝트</li>
+          <li data-i18n data-ko="RCE, 프롬프트 인젝션 등 취약점 관점 테스트를 수행" data-en="Includes vulnerability-oriented testing such as RCE and prompt-injection attempts">RCE, 프롬프트 인젝션 등 취약점 관점 테스트를 수행</li>
+          <li data-i18n data-ko="OpenClaw 버전과 모델 버전에 따라 동작 차이를 관찰" data-en="Observed how behavior changed depending on OpenClaw and AI model versions">OpenClaw 버전과 모델 버전에 따라 동작 차이를 관찰</li>
+          <li data-i18n data-ko="단순 실습이 아니라 실제 구현과 산출물 정리까지 포함" data-en="Goes beyond experimentation into actual implementation and deliverable organization">단순 실습이 아니라 실제 구현과 산출물 정리까지 포함</li>
+        </ul>
       </section>
     </main>
   </div>
