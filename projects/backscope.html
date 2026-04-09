@@ -19,11 +19,11 @@
       </a>
       <div class="topbar-right">
         <nav class="nav">
-        <a href="../index.html">Home</a>
-        <a href="../projects.html">Projects</a>
-        <a href="../research.html">Research</a>
-        <a href="../links.html">Links</a>
-      </nav>
+          <a href="../index.html">Home</a>
+          <a href="../projects.html">Projects</a>
+          <a href="../research.html">Research</a>
+          <a href="../links.html">Links</a>
+        </nav>
         <button type="button" class="lang-toggle single-toggle" data-lang-toggle data-next-lang="en" aria-label="Switch language to EN">
           <span class="lang-toggle-caption">Lang</span>
           <span class="lang-toggle-value" data-lang-toggle-label>EN</span>
@@ -32,50 +32,58 @@
     </header>
     <main>
       <section class="panel section page-hero">
-        <span class="section-kicker">Project Detail</span>
+        <span class="section-kicker" data-i18n data-ko="Project Detail / 프로젝트 상세" data-en="Project Detail / Overview">Project Detail / 프로젝트 상세</span>
         <h1 class="page-title">BackScope</h1>
-        <p class="lead-paragraph">Backend-facing reconnaissance and behavior triage project focused on routes, parameters, responses, low-risk probes, and structured follow-up review.</p>
+        <p class="lead-paragraph" data-i18n data-ko="AI를 활용해 백엔드 표면 분석용 도구를 직접 만들어본 프로젝트." data-en="A backend-surface analysis project built as an AI-driven experimentation process.">AI를 활용해 백엔드 표면 분석용 도구를 직접 만들어본 프로젝트.</p>
         <div class="hero-actions">
           <a class="button secondary" href="https://github.com/tasteapple/BackScope" target="_blank" rel="noreferrer">GitHub ↗</a>
-          <a class="button secondary" href="../projects.html">Back to Projects</a>
+          <a class="button secondary" href="../projects.html" data-i18n data-ko="프로젝트 목록으로" data-en="Back to Projects">프로젝트 목록으로</a>
         </div>
       </section>
 
       <section class="content-grid">
         <article class="panel section span-7">
-          <h2>Overview</h2>
-          <p>BackScope was designed as the backend counterpart to FrontScope. It focuses on server-side surface discovery and triage: route candidates, parameter patterns, response behavior, low-risk probe comparison, and reporting that helps determine where deeper review should happen.</p>
+          <h2 data-i18n data-ko="Overview / 개요" data-en="Overview / Summary">Overview / 개요</h2>
+          <p data-i18n data-ko="BackScope는 FrontScope의 백엔드 대응 프로젝트로, 서버 측 표면을 어떻게 더 구조적으로 수집하고 정리할 수 있을지를 AI를 활용해 실험해본 프로젝트다." data-en="BackScope was developed as the backend counterpart to FrontScope, exploring how AI could be used to structure and extend server-side surface analysis more effectively.">BackScope는 FrontScope의 백엔드 대응 프로젝트로, 서버 측 표면을 어떻게 더 구조적으로 수집하고 정리할 수 있을지를 AI를 활용해 실험해본 프로젝트다.</p>
+          <p data-i18n data-ko="이 프로젝트는 라우트, 파라미터, 응답 행위, 저위험 probe 결과를 수집하고 비교하면서 백엔드 분석을 더 체계적으로 진행할 수 있는 흐름을 만들어보는 방향으로 발전했다." data-en="It evolved into a workflow for collecting and comparing routes, parameters, response behavior, and low-risk probes so backend analysis could be approached in a more structured way.">이 프로젝트는 라우트, 파라미터, 응답 행위, 저위험 probe 결과를 수집하고 비교하면서 백엔드 분석을 더 체계적으로 진행할 수 있는 흐름을 만들어보는 방향으로 발전했다.</p>
         </article>
         <article class="panel section span-5">
-          <h2>Core Focus</h2>
+          <h2 data-i18n data-ko="Core Focus / 핵심 방향" data-en="Core Focus / Main Features">Core Focus / 핵심 방향</h2>
           <ul class="clean-list">
-            <li>Route and input-surface mapping</li>
-            <li>Backend response behavior analysis</li>
-            <li>Low-risk probe-based comparison</li>
-            <li>Triage-oriented reporting</li>
+            <li data-i18n data-ko="백엔드 라우트와 입력 표면 분석" data-en="Backend route and input-surface analysis">백엔드 라우트와 입력 표면 분석</li>
+            <li data-i18n data-ko="파라미터와 응답 행위 비교" data-en="Parameter and response behavior comparison">파라미터와 응답 행위 비교</li>
+            <li data-i18n data-ko="저위험 probe 기반 triage" data-en="Low-risk probe-driven triage">저위험 probe 기반 triage</li>
+            <li data-i18n data-ko="리포트 생성과 우선순위 정리" data-en="Reporting and prioritization workflow">리포트 생성과 우선순위 정리</li>
           </ul>
         </article>
       </section>
 
       <section class="panel section">
-        <h2>Key Characteristics</h2>
-        <ul class="clean-list">
-          <li>Collects route and parameter candidates from backend-facing surface</li>
-          <li>Uses low-risk methods to compare behavior across routes and request styles</li>
-          <li>Helps prioritize where deeper backend analysis should focus first</li>
-          <li>Builds reports that connect discovery, behavior, and review direction</li>
-        </ul>
+        <h2 data-i18n data-ko="Why I Built It / 만든 이유" data-en="Why I Built It / Motivation">Why I Built It / 만든 이유</h2>
+        <p data-i18n data-ko="FrontScope와 같은 흐름에서, 이번에는 백엔드 쪽 표면도 AI를 사용해 직접 분석 도구 형태로 만들어보고 싶었다. 단순히 endpoint를 나열하는 수준을 넘어서, 어떤 라우트와 파라미터가 더 중요하고 어떤 응답이 더 의미 있는지를 정리해보는 것이 목적이었다." data-en="Following the same direction as FrontScope, I wanted to see if AI could also be used to build a backend-facing analysis tool. The goal was to move beyond simple endpoint listing and toward a workflow that could highlight which routes, parameters, and responses mattered more.">FrontScope와 같은 흐름에서, 이번에는 백엔드 쪽 표면도 AI를 사용해 직접 분석 도구 형태로 만들어보고 싶었다. 단순히 endpoint를 나열하는 수준을 넘어서, 어떤 라우트와 파라미터가 더 중요하고 어떤 응답이 더 의미 있는지를 정리해보는 것이 목적이었다.</p>
+        <p data-i18n data-ko="즉 BackScope 역시 AI 활용도를 높이기 위해 직접 만들어본 프로젝트이며, 프론트엔드 표면 분석에서 한 단계 더 확장해 백엔드 분석 흐름까지 이어본 시도라고 볼 수 있다." data-en="BackScope is therefore also an AI-driven project, extending the same experimentation from frontend surface analysis into backend-oriented review and triage.">즉 BackScope 역시 AI 활용도를 높이기 위해 직접 만들어본 프로젝트이며, 프론트엔드 표면 분석에서 한 단계 더 확장해 백엔드 분석 흐름까지 이어본 시도라고 볼 수 있다.</p>
       </section>
 
       <section class="content-grid">
         <article class="panel section span-6">
-          <h2>Why It Exists</h2>
-          <p>BackScope was built to move beyond simple endpoint listing and into backend triage: which routes matter, which parameters deserve attention, and which response patterns suggest deeper follow-up.</p>
+          <h2 data-i18n data-ko="My Role / 역할" data-en="My Role / Contribution">My Role / 역할</h2>
+          <p data-i18n data-ko="이 프로젝트에서도 나는 세부 구현을 직접 손으로 하나씩 쌓았다기보다, AI에게 어떤 분석을 추가할지, 어떤 방향으로 확장할지, 어떤 기능을 더 넣을지 지시하면서 전체 흐름을 조정했다." data-en="As with FrontScope, my role was less about manually writing every detail from scratch and more about directing the overall evolution of the tool: deciding what analysis to add, what functionality to extend, and where the project should go next.">이 프로젝트에서도 나는 세부 구현을 직접 손으로 하나씩 쌓았다기보다, AI에게 어떤 분석을 추가할지, 어떤 방향으로 확장할지, 어떤 기능을 더 넣을지 지시하면서 전체 흐름을 조정했다.</p>
+          <p data-i18n data-ko="즉 BackScope 역시 AI를 활용한 기획·지시·구조화 중심의 프로젝트라고 소개하는 것이 자연스럽다." data-en="That makes BackScope another project shaped mainly through AI-assisted planning, prompting, and structuring rather than traditional solo implementation alone.">즉 BackScope 역시 AI를 활용한 기획·지시·구조화 중심의 프로젝트라고 소개하는 것이 자연스럽다.</p>
         </article>
         <article class="panel section span-6">
-          <h2>Project Direction</h2>
-          <p>The project grew toward behavior comparison, probe-driven differential analysis, and more readable reporting so backend review could be prioritized instead of scattered.</p>
+          <h2 data-i18n data-ko="How I Want It Framed / 어떻게 소개하고 싶은가" data-en="How I Want It Framed / Positioning">How I Want It Framed / 어떻게 소개하고 싶은가</h2>
+          <p data-i18n data-ko="BackScope는 “AI 활용도를 높이기 위해 직접 만들어본 백엔드 표면 분석 프로젝트”로 소개하는 것이 가장 잘 맞는다. 이 프로젝트의 핵심은 완성된 백엔드 도구 자체보다, AI를 사용해 분석 흐름을 설계하고 기능을 덧붙이며 실제 결과물로 정리해본 경험에 있다." data-en="BackScope is best framed as a backend-surface analysis project created to expand my practical use of AI. More than the finished tool itself, its value lies in the experience of using AI to shape analysis workflows and turn them into a usable result.">BackScope는 “AI 활용도를 높이기 위해 직접 만들어본 백엔드 표면 분석 프로젝트”로 소개하는 것이 가장 잘 맞는다. 이 프로젝트의 핵심은 완성된 백엔드 도구 자체보다, AI를 사용해 분석 흐름을 설계하고 기능을 덧붙이며 실제 결과물로 정리해본 경험에 있다.</p>
         </article>
+      </section>
+
+      <section class="panel section">
+        <h2 data-i18n data-ko="What Stands Out / 강조할 포인트" data-en="What Stands Out / Highlights">What Stands Out / 강조할 포인트</h2>
+        <ul class="clean-list">
+          <li data-i18n data-ko="AI를 사용한 백엔드 표면 분석 도구 제작 실험" data-en="A practical experiment in building a backend-surface analysis tool with AI">AI를 사용한 백엔드 표면 분석 도구 제작 실험</li>
+          <li data-i18n data-ko="라우트, 파라미터, 응답 행위, probe 결과를 하나의 흐름으로 연결" data-en="A workflow that connects routes, parameters, response behavior, and probe results">라우트, 파라미터, 응답 행위, probe 결과를 하나의 흐름으로 연결</li>
+          <li data-i18n data-ko="단순 수집이 아니라 triage와 우선순위 정리까지 확장" data-en="Extended beyond collection into triage and prioritization">단순 수집이 아니라 triage와 우선순위 정리까지 확장</li>
+          <li data-i18n data-ko="AI를 활용한 개발 워크플로우를 실제 보안 도구 형태로 남긴 프로젝트" data-en="A portfolio project that turned an AI-assisted development workflow into a practical security-oriented tool">AI를 활용한 개발 워크플로우를 실제 보안 도구 형태로 남긴 프로젝트</li>
+        </ul>
       </section>
     </main>
   </div>
