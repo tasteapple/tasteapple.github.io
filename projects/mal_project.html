@@ -19,11 +19,11 @@
       </a>
       <div class="topbar-right">
         <nav class="nav">
-        <a href="../index.html">Home</a>
-        <a href="../projects.html">Projects</a>
-        <a href="../research.html">Research</a>
-        <a href="../links.html">Links</a>
-      </nav>
+          <a href="../index.html">Home</a>
+          <a href="../projects.html">Projects</a>
+          <a href="../research.html">Research</a>
+          <a href="../links.html">Links</a>
+        </nav>
         <button type="button" class="lang-toggle single-toggle" data-lang-toggle data-next-lang="en" aria-label="Switch language to EN">
           <span class="lang-toggle-caption">Lang</span>
           <span class="lang-toggle-value" data-lang-toggle-label>EN</span>
@@ -32,34 +32,56 @@
     </header>
     <main>
       <section class="panel section page-hero">
-        <span class="section-kicker">Project Detail</span>
+        <span class="section-kicker" data-i18n data-ko="Project Detail / 프로젝트 상세" data-en="Project Detail / Overview">Project Detail / 프로젝트 상세</span>
         <h1 class="page-title">mal_project</h1>
-        <p class="lead-paragraph">Malware-related project work connected to implementation practice, behavior understanding, and analysis-oriented security learning.</p>
+        <p class="lead-paragraph" data-i18n data-ko="악성코드가 어떻게 동작하고 어떻게 탐지할 수 있는지를 직접 실습해보기 위해 진행한 분석 프로젝트." data-en="A hands-on malware analysis project created to understand how malicious behavior works and how it can be detected.">악성코드가 어떻게 동작하고 어떻게 탐지할 수 있는지를 직접 실습해보기 위해 진행한 분석 프로젝트.</p>
         <div class="hero-actions">
           <a class="button secondary" href="https://github.com/tasteapple/mal_project" target="_blank" rel="noreferrer">GitHub ↗</a>
-          <a class="button secondary" href="../projects.html">Back to Projects</a>
+          <a class="button secondary" href="../projects.html" data-i18n data-ko="프로젝트 목록으로" data-en="Back to Projects">프로젝트 목록으로</a>
         </div>
       </section>
 
+      <section class="content-grid">
+        <article class="panel section span-7">
+          <h2 data-i18n data-ko="Overview / 개요" data-en="Overview / Summary">Overview / 개요</h2>
+          <p data-i18n data-ko="이 프로젝트는 악성코드가 실제로 어떤 방식으로 동작하는지 이해하기 위해 시작한 실습형 분석 프로젝트다. 특히 최근 악성코드가 운영체제나 프로그램 안에 이미 존재하는 합법적인 도구와 기능을 활용하는 경우가 많다는 점에 관심을 두고, 그 흐름을 직접 확인해보고 싶어서 진행하게 됐다." data-en="This project was started as a practical analysis exercise to understand how malware actually operates. In particular, I was interested in the way modern malware often relies on legitimate built-in tools and operating-system functionality, and I wanted to examine that behavior through direct hands-on work.">이 프로젝트는 악성코드가 실제로 어떤 방식으로 동작하는지 이해하기 위해 시작한 실습형 분석 프로젝트다. 특히 최근 악성코드가 운영체제나 프로그램 안에 이미 존재하는 합법적인 도구와 기능을 활용하는 경우가 많다는 점에 관심을 두고, 그 흐름을 직접 확인해보고 싶어서 진행하게 됐다.</p>
+          <p data-i18n data-ko="즉 단순히 자료를 읽고 정리하는 데서 그치지 않고, 동작 원리와 탐지 흐름을 직접 다뤄보면서 학습 내용을 프로젝트 형태로 남기는 것이 핵심이었다." data-en="The goal was not only to read about malware behavior, but to work through behavior and detection flow directly so the learning process could be captured as a project outcome.">즉 단순히 자료를 읽고 정리하는 데서 그치지 않고, 동작 원리와 탐지 흐름을 직접 다뤄보면서 학습 내용을 프로젝트 형태로 남기는 것이 핵심이었다.</p>
+        </article>
+        <article class="panel section span-5">
+          <h2 data-i18n data-ko="Core Focus / 핵심 내용" data-en="Core Focus / Main Areas">Core Focus / 핵심 내용</h2>
+          <ul class="clean-list">
+            <li data-i18n data-ko="악성코드 동작 분석" data-en="Malware behavior analysis">악성코드 동작 분석</li>
+            <li data-i18n data-ko="구현 실습" data-en="Implementation practice">구현 실습</li>
+            <li data-i18n data-ko="시나리오 구성" data-en="Scenario design">시나리오 구성</li>
+            <li data-i18n data-ko="YARA 룰을 활용한 탐지 흐름" data-en="Detection flow using YARA rules">YARA 룰을 활용한 탐지 흐름</li>
+          </ul>
+        </article>
+      </section>
+
       <section class="panel section">
-        <h2>Overview</h2>
-        <p>This project belongs to the malware-analysis side of the portfolio. It reflects technical work tied to understanding malicious behavior, implementation practice, and security-oriented experimentation rather than only passive study.</p>
-        <ul class="clean-list">
-          <li>Malware-focused implementation and analysis</li>
-          <li>Behavior understanding through practical work</li>
-          <li>Security learning tied to project output</li>
-        </ul>
+        <h2 data-i18n data-ko="Why I Built It / 만든 이유" data-en="Why I Built It / Motivation">Why I Built It / 만든 이유</h2>
+        <p data-i18n data-ko="악성코드가 단순히 독립적인 실행 파일 하나로만 존재하는 것이 아니라, 합법적인 시스템 도구나 애플리케이션 내부 기능을 활용해 동작하는 경우가 있다는 점이 흥미로웠다. 그래서 그런 흐름을 단순히 이론으로만 이해하는 것이 아니라, 직접 실습해보면서 동작 원리와 분석 포인트를 체감해보고 싶었다." data-en="I was interested in the fact that malware is not always a single obvious malicious executable, but can instead make use of legitimate system tools and embedded functionality. Rather than understanding that only as theory, I wanted to work through it directly and study the behavior and analysis points myself.">악성코드가 단순히 독립적인 실행 파일 하나로만 존재하는 것이 아니라, 합법적인 시스템 도구나 애플리케이션 내부 기능을 활용해 동작하는 경우가 있다는 점이 흥미로웠다. 그래서 그런 흐름을 단순히 이론으로만 이해하는 것이 아니라, 직접 실습해보면서 동작 원리와 분석 포인트를 체감해보고 싶었다.</p>
       </section>
 
       <section class="content-grid">
         <article class="panel section span-6">
-          <h2>Portfolio Role</h2>
-          <p>This project helps represent the offensive-and-analytical training side of the portfolio, where technical understanding is strengthened through implementation and observation rather than only theory.</p>
+          <h2 data-i18n data-ko="My Role / 역할" data-en="My Role / Contribution">My Role / 역할</h2>
+          <p data-i18n data-ko="이 프로젝트에서는 엑셀 매크로에 사용되는 VBA 코드와 악성코드 동작 요소를 직접 다뤘다. 즉 단순히 개념만 정리한 것이 아니라, 동작을 구성하고 실습하는 쪽에 직접 손을 댄 프로젝트였다." data-en="In this project, I worked directly with VBA used in Excel macros and with the behavior components involved in the malware scenario. This means the project was not limited to conceptual study, but included hands-on construction and practice." >이 프로젝트에서는 엑셀 매크로에 사용되는 VBA 코드와 악성코드 동작 요소를 직접 다뤘다. 즉 단순히 개념만 정리한 것이 아니라, 동작을 구성하고 실습하는 쪽에 직접 손을 댄 프로젝트였다.</p>
         </article>
         <article class="panel section span-6">
-          <h2>Why It Matters</h2>
-          <p>It shows a willingness to engage with lower-level behavior, implementation details, and the practical mechanics of how malicious logic can be studied and understood.</p>
+          <h2 data-i18n data-ko="How I Want It Framed / 어떻게 소개하고 싶은가" data-en="How I Want It Framed / Positioning">How I Want It Framed / 어떻게 소개하고 싶은가</h2>
+          <p data-i18n data-ko="이 프로젝트는 “악성코드 분석 실습 프로젝트”로 소개하는 것이 가장 적절하다. 핵심은 위험한 행위를 과장하는 데 있는 것이 아니라, 동작 원리와 탐지 방법을 직접 이해하기 위해 실습 중심으로 접근했다는 점에 있다." data-en="This project is best framed as a malware analysis practice project. Its value is not in dramatizing malicious behavior, but in approaching malware from a hands-on perspective to better understand both behavior and detection." >이 프로젝트는 “악성코드 분석 실습 프로젝트”로 소개하는 것이 가장 적절하다. 핵심은 위험한 행위를 과장하는 데 있는 것이 아니라, 동작 원리와 탐지 방법을 직접 이해하기 위해 실습 중심으로 접근했다는 점에 있다.</p>
         </article>
+      </section>
+
+      <section class="panel section">
+        <h2 data-i18n data-ko="What Stands Out / 강조할 포인트" data-en="What Stands Out / Highlights">What Stands Out / 강조할 포인트</h2>
+        <ul class="clean-list">
+          <li data-i18n data-ko="단순 이론 학습이 아니라 직접 실습해본 프로젝트" data-en="A project built through direct practice rather than passive theory alone">단순 이론 학습이 아니라 직접 실습해본 프로젝트</li>
+          <li data-i18n data-ko="악성코드 동작 분석과 구현 흐름을 함께 다룸" data-en="Combines malware behavior analysis with implementation-oriented practice">악성코드 동작 분석과 구현 흐름을 함께 다룸</li>
+          <li data-i18n data-ko="YARA 룰을 만들어 탐지까지 함께 다룸" data-en="Extends beyond behavior into detection by creating YARA rules">YARA 룰을 만들어 탐지까지 함께 다룸</li>
+          <li data-i18n data-ko="분석, 실습, 탐지라는 세 흐름을 하나의 프로젝트로 연결" data-en="Connects analysis, practice, and detection in one learning-oriented project">분석, 실습, 탐지라는 세 흐름을 하나의 프로젝트로 연결</li>
+        </ul>
       </section>
     </main>
   </div>
