@@ -19,11 +19,11 @@
       </a>
       <div class="topbar-right">
         <nav class="nav">
-        <a href="../index.html">Home</a>
-        <a href="../projects.html">Projects</a>
-        <a href="../research.html">Research</a>
-        <a href="../links.html">Links</a>
-      </nav>
+          <a href="../index.html">Home</a>
+          <a href="../projects.html">Projects</a>
+          <a href="../research.html">Research</a>
+          <a href="../links.html">Links</a>
+        </nav>
         <button type="button" class="lang-toggle single-toggle" data-lang-toggle data-next-lang="en" aria-label="Switch language to EN">
           <span class="lang-toggle-caption">Lang</span>
           <span class="lang-toggle-value" data-lang-toggle-label>EN</span>
@@ -32,34 +32,56 @@
     </header>
     <main>
       <section class="panel section page-hero">
-        <span class="section-kicker">Project Detail</span>
+        <span class="section-kicker" data-i18n data-ko="Project Detail / 프로젝트 상세" data-en="Project Detail / Overview">Project Detail / 프로젝트 상세</span>
         <h1 class="page-title">HighFour</h1>
-        <p class="lead-paragraph">Collaborative project shaped by planning, role definition, implementation flow, and team-based execution.</p>
+        <p class="lead-paragraph" data-i18n data-ko="배운 파이썬, 머신러닝, 딥러닝을 실제로 써보기 위해 만든 협업형 팀 프로젝트." data-en="A collaborative team project built to apply what I learned in Python, machine learning, and deep learning to a real implementation.">배운 파이썬, 머신러닝, 딥러닝을 실제로 써보기 위해 만든 협업형 팀 프로젝트.</p>
         <div class="hero-actions">
           <a class="button secondary" href="https://github.com/tasteapple/HighFour" target="_blank" rel="noreferrer">GitHub ↗</a>
-          <a class="button secondary" href="../projects.html">Back to Projects</a>
+          <a class="button secondary" href="../projects.html" data-i18n data-ko="프로젝트 목록으로" data-en="Back to Projects">프로젝트 목록으로</a>
         </div>
       </section>
 
+      <section class="content-grid">
+        <article class="panel section span-7">
+          <h2 data-i18n data-ko="Overview / 개요" data-en="Overview / Summary">Overview / 개요</h2>
+          <p data-i18n data-ko="HighFour는 파이썬, 머신러닝, 딥러닝을 배우고 난 뒤, 그 내용을 실제로 써먹어 보기 위해 진행한 팀 프로젝트다. 프로젝트의 핵심 아이디어는 사용자가 증상을 입력하면 가능한 병명을 유추해주고, 필요할 경우 근처 병원을 추천해주는 프로그램을 만드는 것이었다." data-en="HighFour was a team project created after learning Python, machine learning, and deep learning, with the goal of applying that knowledge in a practical way. The core idea was to build a program that could infer possible illnesses from user-input symptoms and recommend nearby hospitals when the situation seemed serious.">HighFour는 파이썬, 머신러닝, 딥러닝을 배우고 난 뒤, 그 내용을 실제로 써먹어 보기 위해 진행한 팀 프로젝트다. 프로젝트의 핵심 아이디어는 사용자가 증상을 입력하면 가능한 병명을 유추해주고, 필요할 경우 근처 병원을 추천해주는 프로그램을 만드는 것이었다.</p>
+          <p data-i18n data-ko="즉 단순한 학습 정리에서 끝나는 것이 아니라, 배운 기술을 실제 동작하는 서비스 형태로 연결해보는 데 의미가 있었다." data-en="Its value was in moving beyond passive study and turning learned techniques into something that could actually run as a working service concept.">즉 단순한 학습 정리에서 끝나는 것이 아니라, 배운 기술을 실제 동작하는 서비스 형태로 연결해보는 데 의미가 있었다.</p>
+        </article>
+        <article class="panel section span-5">
+          <h2 data-i18n data-ko="Core Focus / 핵심 내용" data-en="Core Focus / Main Areas">Core Focus / 핵심 내용</h2>
+          <ul class="clean-list">
+            <li data-i18n data-ko="증상 기반 병명 유추" data-en="Symptom-based disease inference">증상 기반 병명 유추</li>
+            <li data-i18n data-ko="근처 병원 추천" data-en="Nearby hospital recommendation">근처 병원 추천</li>
+            <li data-i18n data-ko="실제 동작 시연" data-en="Working demonstration">실제 동작 시연</li>
+            <li data-i18n data-ko="머신러닝/딥러닝 모델 적용" data-en="Applied machine learning and deep learning models">머신러닝/딥러닝 모델 적용</li>
+          </ul>
+        </article>
+      </section>
+
       <section class="panel section">
-        <h2>Overview</h2>
-        <p>HighFour reflects the team-project side of the portfolio. It represents work shaped not only by implementation itself, but also by planning, task progression, project structure, and collaborative execution.</p>
-        <ul class="clean-list">
-          <li>Planning and role structure</li>
-          <li>Implementation flow and progress management</li>
-          <li>Team-oriented technical execution</li>
-        </ul>
+        <h2 data-i18n data-ko="Why I Built It / 만든 이유" data-en="Why I Built It / Motivation">Why I Built It / 만든 이유</h2>
+        <p data-i18n data-ko="이 프로젝트를 만든 이유는 파이썬, 머신러닝, 딥러닝을 배우고 끝내는 것이 아니라, 실제로 쓸 수 있는 형태로 한 번 만들어보고 싶었기 때문이다. 즉 배운 내용을 실제 서비스 형태에 가깝게 적용해보는 것이 핵심 동기였다." data-en="The reason for building this project was simple: after learning Python, machine learning, and deep learning, I wanted to actually use them rather than stop at theory. The main motivation was to apply what I learned in a form that resembled a working service.">이 프로젝트를 만든 이유는 파이썬, 머신러닝, 딥러닝을 배우고 끝내는 것이 아니라, 실제로 쓸 수 있는 형태로 한 번 만들어보고 싶었기 때문이다. 즉 배운 내용을 실제 서비스 형태에 가깝게 적용해보는 것이 핵심 동기였다.</p>
       </section>
 
       <section class="content-grid">
         <article class="panel section span-6">
-          <h2>Team Context</h2>
-          <p>This project is useful as portfolio evidence because it shows participation in a structured workflow rather than a single isolated deliverable.</p>
+          <h2 data-i18n data-ko="My Role / 역할" data-en="My Role / Contribution">My Role / 역할</h2>
+          <p data-i18n data-ko="이 프로젝트에서 나는 모델을 직접 만들고, 여러 모델을 실험하고 비교하면서 가장 나은 결과를 내는 방향을 찾는 역할을 맡았다. 즉 단순히 팀 프로젝트에 참여한 것이 아니라, 핵심이 되는 모델링과 트레이닝을 직접 담당했다." data-en="My role in this project was to build the model directly, try multiple model approaches, and identify which one produced the best result. In other words, I was not only part of the team process, but directly responsible for the core modeling and training work.">이 프로젝트에서 나는 모델을 직접 만들고, 여러 모델을 실험하고 비교하면서 가장 나은 결과를 내는 방향을 찾는 역할을 맡았다. 즉 단순히 팀 프로젝트에 참여한 것이 아니라, 핵심이 되는 모델링과 트레이닝을 직접 담당했다.</p>
         </article>
         <article class="panel section span-6">
-          <h2>Execution Pattern</h2>
-          <p>Planning, ownership, and progression matter here just as much as code or output. That makes the project valuable as evidence of process discipline as well as technical contribution.</p>
+          <h2 data-i18n data-ko="How I Want It Framed / 어떻게 소개하고 싶은가" data-en="How I Want It Framed / Positioning">How I Want It Framed / 어떻게 소개하고 싶은가</h2>
+          <p data-i18n data-ko="이 프로젝트는 ‘협업형 팀 프로젝트’로 소개하는 것이 가장 잘 맞는다. 동시에, 배운 기술을 실제 구현으로 연결하고, 모델을 직접 만들고 학습시켜 동작하는 결과물까지 만들어낸 프로젝트라는 점도 함께 보여주고 싶다." data-en="This project is best framed as a collaborative team project. At the same time, it should also be presented as a project that turned learned techniques into a working implementation through direct model building and training.">이 프로젝트는 ‘협업형 팀 프로젝트’로 소개하는 것이 가장 잘 맞는다. 동시에, 배운 기술을 실제 구현으로 연결하고, 모델을 직접 만들고 학습시켜 동작하는 결과물까지 만들어낸 프로젝트라는 점도 함께 보여주고 싶다.</p>
         </article>
+      </section>
+
+      <section class="panel section">
+        <h2 data-i18n data-ko="What Stands Out / 강조할 포인트" data-en="What Stands Out / Highlights">What Stands Out / 강조할 포인트</h2>
+        <ul class="clean-list">
+          <li data-i18n data-ko="배운 파이썬, 머신러닝, 딥러닝을 실제 프로젝트에 적용" data-en="Applied learned Python, machine learning, and deep learning skills to a real project">배운 파이썬, 머신러닝, 딥러닝을 실제 프로젝트에 적용</li>
+          <li data-i18n data-ko="직접 모델을 만들고 트레이닝함" data-en="Built and trained the model directly">직접 모델을 만들고 트레이닝함</li>
+          <li data-i18n data-ko="실제 동작 시연이 가능한 형태로 구현" data-en="Implemented in a form that could be demonstrated in practice">실제 동작 시연이 가능한 형태로 구현</li>
+          <li data-i18n data-ko="협업 구조, 결과물, 발표 흐름까지 포함된 팀 프로젝트" data-en="A team project that includes collaboration flow, output, and presentation structure">협업 구조, 결과물, 발표 흐름까지 포함된 팀 프로젝트</li>
+        </ul>
       </section>
     </main>
   </div>
