@@ -304,6 +304,10 @@ a {
   background: rgba(255,255,255,0.7);
 }
 
+.project-diagram-frame.compact {
+  box-shadow: 0 12px 28px rgba(80, 110, 160, 0.08);
+}
+
 .project-diagram-frame img {
   display: block;
   width: 100%;
