@@ -297,6 +297,25 @@ a {
   line-height: 1.7;
 }
 
+.project-diagram-frame {
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(31, 41, 55, 0.08);
+  background: rgba(255,255,255,0.7);
+}
+
+.project-diagram-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-diagram-caption {
+  margin-top: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .stat-card {
   padding: 20px;
   border-radius: 20px;
